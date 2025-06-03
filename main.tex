@@ -1,0 +1,91 @@
+\documentclass[a4paper,12pt]{article} 
+
+\usepackage[utf8]{inputenc}           
+\usepackage[T1]{fontenc}              
+\usepackage[swedish]{babel}              
+\usepackage{graphicx,float}  
+\usepackage{amsmath,amssymb,amsfonts} 
+\usepackage{enumerate}                
+\usepackage{fancyhdr}                
+\usepackage{hyperref}                 
+\usepackage{etoolbox}
+\usepackage{subcaption}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+
+% for code
+\usepackage{minted}
+
+\usepackage[framed, numbered]{matlab-prettifier}
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\usepackage[margin=3ex,font=small,labelfont=bf,labelsep=endash]{caption}
+\newcommand{\mail}[1]{\href{mailto:#1}{\nolinkurl{#1}}}
+
+\let\oldAuthor\author
+\renewcommand{\author}[1]{\newcommand{\myAuthor}{#1}\oldAuthor{#1}} 
+\let\oldTitle\title
+\renewcommand{\title}[1]{\newcommand{\myTitle}{#1}\oldTitle{#1}} 
+
+\hypersetup{
+ colorlinks=true}
+
+
+\begin{document}
+ \title{Projekt Streamline}
+
+ \author{Namn: Tim Sjöström, Elias Kristmansson, \\Ludwig Lönnberg \& Angelica Nordin}
+ \date{Version 1.0}
+
+\begin{titlepage}
+ \maketitle 
+ \thispagestyle{fancy}
+ \headheight 39pt
+ \rhead{\small 
+   Produktutveckling i medieteknik med metoden 'Design-Build-Test'\\ 
+    \today }
+ \lhead{\small  Umeå Universitet \\ Inst. för tillämpad fysik och elektronik}
+
+ \cfoot{Lärare: Keni Ren, Stefan Berglund, Mattias Andersson }
+  
+\end{titlepage}
+\newpage
+\pagestyle{fancy}
+\headheight 30pt 
+\rhead{\small \myTitle}
+\lhead{\small \myAuthor}
+\cfoot{\thepage}
+{
+ \hypersetup{linkcolor=black}
+ \tableofcontents
+}
+\newpage 
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\section{Inledning}
+
+
+\section{Problembeskrivning}
+
+
+\section{Systembeskrivning}
+
+
+\section{Implementation}
+
+
+\section{Gränssnitt}
+
+
+\section{Lösningens begränsningar}
+
+
+\section{Problem och reflektioner}
+
+
+\section{Referenser}
+Namn (YYYY). Författare.\\
+\href{länk}{hyperlänk} (Hämtad YYYY-MM-DD).
+
+\end{document}
