@@ -26,15 +26,3 @@ För Mac: Perl ska komma med ert OS men om det inte gör det borde det finnas en
 ```
 
 Jag vet inte hur det blir för Mac med Latex-distro men med MikTeX (Windows) fick jag ett 20-tal popups när jag kompilerade Latex-koden i VSCode för att ladda ner packages lokalt. Det är bara att göra.
-
-En annan sak, jag är osäker på om .gitignore hängde med in i repo:t då den inte syns. Men för säkerhets skull, efter ni klonat, skapa en ```.gitignore```-fil och lägg in detta i den: 
-```
-*.aux
-*.log
-*.out
-*.toc
-*.fls
-*.fdb_latexmk
-*.synctex.gz
-*.pdf
-```
