@@ -1,3 +1,5 @@
+För att klona repo: ```git clone https://github.com/EliasKristmansson/dbt_rapport.git```.
+
 För Windows: Följ instruktionerna från ChatGPT i bilden i messenger, och ladda ner Strawberry Perl för Windows.
 
 För Mac: Perl ska komma med ert OS men om det inte gör det borde det finnas en Mac-download nånstans på internet. Annars ändra i Latex Workshops settings för en workaround: 
@@ -25,4 +27,14 @@ För Mac: Perl ska komma med ert OS men om det inte gör det borde det finnas en
 
 Jag vet inte hur det blir för Mac med Latex-distro men med MikTeX (Windows) fick jag ett 20-tal popups när jag kompilerade Latex-koden i VSCode för att ladda ner packages lokalt. Det är bara att göra.
 
-För att klona repo: ```git clone https://github.com/EliasKristmansson/dbt_rapport.git```.
+En annan sak, jag är osäker på om .gitignore hängde med in i repo:t då den inte syns. Men för säkerhets skull, efter ni klonat, skapa en ```.gitignore```-fil och lägg in detta i den: 
+```
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.pdf
+```
