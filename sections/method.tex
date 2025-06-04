@@ -1,2 +1,65 @@
 \section{Metod, process och genomförande}
-Viktigt är att ni beskriver och motiverar alla de metoder som ni använt samt processen att nå fram till ert resultat. Ni ska även lägga in hur de workshops som har genomförts har påverkat ert resultat. Denna del ska motiveras med källor som tänker er process. En diskussion kring hur ni tagit till er av feedbacken från designutvärderingen och hur (eller om) det har påverkat resultatet.
+Här beskrivs hur projektet har genomförts och vilka metoder som använts i processen. Det beskrivs även hur olika workshops under kursens gång samt designutvärderingen påverkat projektet och dess slutresultat. 
+
+\subsection{Tillvägagångssätt och metoder}
+Här beskrivs hur projektet har genomförts och metoder som använts.
+
+\subsubsection{Intervjuer}
+Projektet inleddes med ett besök hos företaget Pelagia där projektgruppen fick en genomgång av alla stationer som fanns och hur de på olika sätt interagerar med deras excel-system. Vi fick även en grundlig genomgång av hur detta system såg ut digitalt där de berättade om en del brister som fanns och önskemål de hade om ett framtida system. Efter detta inledande möte togs det första beslutet inom projektgruppen; vi ska hålla intervjuer som sedan ska ligga till grund för framtagning av prototyper. Gruppen tog fram intervjufrågor för att få en bättre och bredare bild av olika personers upplevelse av excel-systemet. De slutliga frågorna blev följande; 
+\\
+\begin{enumerate}
+    \item Vad heter du? Hur länge har du jobbat på Pelagia?
+    \item Hur ser en vanlig dag ut för dig?
+    \item Vilka steg i processen tar mest tid eller känns mest ineffektiva? 
+    \item Finns det vissa uppgifter som upprepas ofta och som skulle kunna automatiseras, i så fall vilka?
+    \item Vad skulle ett drömsystem innehålla för att göra ert arbete enklare?
+    \item Finns det specifika funktioner som ni saknar i Excel och skulle vilja ha i det nya systemet? (T.ex. sökfunktion, filtrering, automatiska beräkningar?)
+    \item Hur ser ni på behovet av visuella hjälpmedel, såsom grafer och diagram, för att tolka data?
+    \item Vad tycker du om relationen mellan utseende och funktion i systemet, vilken är viktigast?
+\\
+\end{enumerate}
+
+\noindent
+Under intervjuerna delade vi in oss i par och intervjuade en person i taget och antecknade de idéer och önskemål för det nya systemet. Totalt intervjuades fem personer, den röda tråden var att det främst handlade om olika funktioner och filtreringsalternativ de ville ha snarare än utseende. 
+
+\subsubsection{Prototyper och redovisning}
+Med intervjuerna som grund började vi ta fram lo-fi prototyper. Vi satt tillsammans och diskuterade men gjorde varsin version av ett system för hand på papper för att få fram så många olika alternativ som möjligt snarare än att alla jobbade på en enda version. Eftersom vi inte hade en tydlig bild innan detta om hur systemet över huvud taget skulle kunna se ut var detta en bra idé eftersom det gav oss fyra helt olika versioner. Då alla hade en idé om ett upplägg gick vi vidare till att jobba i programmet Figma för att få en mer exakt bild och se prototyperna i gråskala. Här övergick ett par prototyper till mer hi-fi där text lades till men även olika vyer gjordes och övergången däremellan genom olika knappar lades till. Dessa prototyper inspirerades av andra befintliga program där huvudkomponenterna blev topbar, sidebar och workspace. Det delade upp och gav struktur till sidan vilket var behov som uttryckts under intervjuerna.
+\\
+\\
+Ytterligare ett möte med Pelagia bokades in där vi gick igenom och visade upp alla prototyper. Vi höll i en redovisning av materialet och anställda på Pelagia fick sedan ge feedback. Detta gav både positiva kommentarer om vårt upplägg av systemet, designen och idéer om förbättringar och tillägg som noterades. Vi skapade en lista med feedbacken som vi senare kan checka av vartefter, men då både de och vi var nöjda med helhetsdesignen och huvudkomponenterna var prototypen nu redo för att kodas. 
+
+\subsubsection{Programmering av webbsidan}
+Då helheten av designen var bestämd kunde vi påbörja att koda webbsidan. Vi började med att lägga en bas - de tre stora komponenterna/utrymmena: sidebar, topbar och workspace. Det gjordes ingen specifik uppdelning från start, men vi alla höll oss för det mesta inom olika komponenter för att inte råka skriva dubbel kod. 
+\\
+\\
+Kodprocessen började med att enbart lägga in designen på sidan och dess komponenter som olika pop-up-rutor och statistiksidan. Då alla element fanns på sidan kunde dess funktioner börja implementeras. Detta innebar att lägga till skrivbara fält, scrollningsfunktion, göra knappar klickbara och koppla dem till rätt vyer. Några av de större delarna av detta jobb var att lägga in tabellen i workspace där all faktiskt data som Pelagia jobbar med skulle skrivas in. Här lades rymliga avstånd in för att alla kolumner skulle få plats och i skrivfälten lades olika placeholders in samt att endast en specifik datatyp som bokstäver eller siffror lades in beroende på fält. Tabellen fick även rubriker och ett par filterknappar ovanför. Det lades även till en “Nytt projekt”-knapp för då ingen tabell, alltså inget projekt, var valt och workspace var tomt. 
+\\
+\\
+I topbar lades information som projektnamn, prioritet, deadline, antal prover och kommentarer in. Dessa kopplades senare ihop med funktioner i sidebar för att uppdateras korrekt. Här skapades även tabbar som också sa projektnamn samt kunde stängas ner. 
+\\
+\\
+I sidebar lades en del olika knappar till för att lägga till projekt, lägga till mapp, uppdatera sidan, stänga öppna foldrar och minimera sidebar så att workspace kunde ta upp hela skärmen. Under dessa lades ett sökfält in där användaren kan söka efter projekt samt intill denna en filterknapp för att filtrera bland mappar och projekt. Denna knapp implementerades dock aldrig under projektets gång på grund av tidsbrist. Under alla dessa funktioner lades huvudinnehållet i sidebar in, vilket är mappstrukturen med dess projekt som båda kunde läggas till med hjälp av knapparna ovan. Efter dessa följde en knapp som ledde till statistiksidan. Statistiksidan gjordes som en egen komponent och kopplades till denna knapp.
+
+\subsubsection{Återbesök och testning hos Pelagia}
+Då systemet vi byggt var “färdigställt” baserat på tidigare intervjuer med anställda hos Pelagia bokades ett nytt möte där de fick se hur långt vi kommit med hemsidan och fick ge oss ytterligare feedback. Detta blev ett möte med endast en person på Pelagia som själv fick försöka navigera och använda hemsidan så han intuitivt ville göra. Detta för att ge oss en inblick i hur någon som faktiskt ska använda systemet nästan dagligen intuitivt vill använda det. Detta var ett väldigt bra sätt att komma fram till nästa steg och nya idéer både för oss och Pelagia då vi inte hade några förväntningar på vad som skulle uppmärksammas. Om det fanns funktioner som vår testperson själv inte hittade eller använde visade vi även detta för att ha gått igenom allt som vi hittills hade implementerat. 
+\\
+\\
+Vi fick fram flera olika önskemål från detta möte som skrevs ner, bland annat saker som fler kolumner i tabellen, funktioner att byta namn genom dubbelklick i topbar och att kunna flagga ett projekt i ett flertal färger enligt ett färgkod system som de redan använde i sitt nuvarande excel-system.
+
+\subsubsection{Sammanställning}
+Baserat på den senaste feedbacken vi fick under mötet hos Pelagia lade vi till de ytterligare funktioner som diskuterades under mötet. Bland annat lade vi till flera flaggningsalternativ som ett av filteralternativen i workspace baserat på Pelagias tidigare färgkodning. Det lades till ett par kolumner i tabellen för att räkna antal vialer samt en drop-down-meny där de kan fylla i återkommande “fel” med prover som kommer in. 
+\\
+\\
+De sista 1-2 veckorna av projekttiden letades och fixades en hel del småbuggar som uppkommit under tidens gång som att vissa knappar plötsligt inte fungerade eller att en viss text inte var på rätt plats osv. Under denna tid började vi även skapa en presentation av arbetet i form av en powerpoint. Efter slutpresentationen samlades materialet till webbsidan ihop med en lista av kända buggar och ytterligare ett avslutande besök hos Pelagia hölls där vi visade upp slutprodukten och redovisade kända buggar för att Pelagia själva ska kunna bygga vidare på den grund vi skapat. 
+
+\subsection{Workshops påverkan}
+Den första workshop vi hade handlade om Agila metoder som är en stor del av att jobba i projektform. Här pratade vi mycket om scrum-metoden och gjorde en uppgift där planering och prioritering hade stort fokus. Detta var något vi tog med oss in i vår planering inför vårt egna projekt då vi senare skapade ett GANTT-schema och bestämde att ha en roterande scrum-master i gruppen (Asana, 2025). Scrummaster ansvarade för saker som att boka stå-upp-möten och bara allmänt checka att vi alla är med och har koll när vi bokar möten eller tar beslut. Under projektets gång har vi flera gånger fått inse och göra beslut där vi prioriterar bort saker. I början var ett sådant beslut då vi sa att vi endast skulle fokusera på “front-end” av sidan och ingen “back-end” för att se till att vi verkligen skulle hinna allt. Senare i projektet insåg vi att det nog hade fungerat att ha med båda delar i viss mån, men det var enda bra att ta ett sådant stort beslut i början av projektet för att inte känna oss överväldigande. Det hade alltid gått att ångra och lägga till senare om vi hade velat. Ytterligare en sådan här beslutspunkt kom mot slutet när vi behövde bestämma oss för att lämna kodandet och övergå till endast presentation och rapportskrivande. Det är alltid roligt att göra klart det där lilla sista, men det var ett nödvändigt beslut att tillslut lämna koden trots några få buggar vi kände till. Vi hade helt enkelt inte hunnit med att göra både och om vi vill prestera vårt bästa. 
+\\
+\\
+Det pratades också om innovation, affärsmodeller och branding under workshops. Eftersom vårt projekt är så pass smalt och skräddarsytt blev det svårt att se oss själva som ett företag som vill nå ut till kunder, även om vi tekniskt sett har en väldigt specifik kund. Däremot kunde vi se hur vårt projekt kopplades till vad innovation innebär - vi skulle ju i princip “re-invent” excel. Det har varit viktigt att vara nytänkande och att bygga vår idé från grunden har varit väldigt lärorikt. Vi fick verkligen ta del av och använde allt vi tidigare lärt oss om förstudier, testning och implementering av idéer. 
+\\
+\\
+En annan workshop handlade om tjänstedesign. Skillnaden mellan produkt och tjänst diskuterades där en bra definition traditionellt sett är att produkter ofta är saker som har ett tydligt ägarskap som en penna eller en stol medan tjänster ofta inte är fysiska utan snarare något som en taxiresa eller sjukhusvård. Idag är det dock svårare att dra en rak linje mellan de två eftersom mycket av det vi konsumerar är digitalt där vi både kan äga filer eller nyttja och betala för andras (NNGroup, 2017). I vår projekt skulle vi påstå att vi skapar en tjänst snarare än en produkt. Detta eftersom det är ett digitalt system som ska underlätta för anställda på Pelagia att notera och lagra data som i sin tur hjälper deras kunder. Det är inte en produkt de äger och använder ett par gånger utan snarare ett stöd och hjälpmedel i deras arbete. 
+
+\subsection{Designutvärdering påverkan}
+Gruppen som gav oss feedback en bit in i projektet gav oss i princip bara feedback på sådant vi redan visste. I detta stadie hade vi fått en del av designen på plats och precis börjat implementera olika funktioner, men långt ifrån alla. Detta är något vi borde varit tydligare med i vår överlämning. Den mesta feedback vi fick var därför en lista av grejer på hemsidan som inte var klickbara eller inte gjorde något etc. Detta var ju dock saker vi ännu inte hunnit implementera, utan de hade bara en design så länge. De kommenterade även att hemsidan inte såg speciellt bra ut i mobilformat, vilket inte var något vi själva hade prövat, men det var inte heller något vi fixade eftersom tanken aldrig var att göra ett mobilformat då systemet enbart skulle användas på datorer. Utöver detta nämner de även att allt var i princip samma färger, endast lite blå/gråa knappar utöver det vita och olika ramar runt grejer. Detta var dock ett medvetet val då Pelagia inte ville ha någon färgglad design utan brydde sig mer om enkelhet, bra funktioner och filter. I och med allt detta hade inte feedbacken från designutvärdering särskilt stor påverkan på vårt projekt, men det var bra att höra utomstående personers allmänna åsikt om hemsidan som inte från början vet hur de ska navigera den.
