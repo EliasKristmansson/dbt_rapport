@@ -41,7 +41,7 @@ projektets deadline, antal färdiga prover jämfört med totala antalet, samt an
 \subsubsection{Sidebar}
 Sidebar är placerad till vänster på skärmen och fungerar egentligen som en vanlig filhanterare på din dator, den tillåter navigering och organisering av olika filer (projekt i detta fall) och mappar.
 Den byggdes på detta sätt för att fylla Pelagias behov att få en tydlig överblick av alla projekt samt att framtidssäkra deras system i form av anpassning,
-vilket var svårt med deras tidigare system i Excel.  
+vilket var svårt med deras tidigare system i Excel. Utifrån tester med Pelagias anställda kom det fram att de ville kunna ha mappar i mappar, för att kunna organisera projekt efter kunder samtidigt som söt- marint- och Bräckt vatten.
 
 \begin{figure}[H]
     \centering
@@ -66,7 +66,7 @@ Att kunna stänga alla öppna mappar vilket är användbart för att antalet map
 \\\\
 Det finns även funktionalitet för att döpa om, radera och flytta både projekt och mappar, detta för att ge Pelagia full kontroll av deras struktur och arbetssätt. Flytt av mapp eller projekt görs genom ''drag and drop''. Implementationen av detta är
 lite skakig, men syftet är att det ska vara enkelt och intuitivt att flytta något. Namnbyte och radering hittas genom att högerklicka på ett projekt eller mapp och för att förhindra att detta råkas göra, behöver dessa funktioner bekräftas i en ''pop up'' modal innan ändringen tar effekt.
-Utöver namnbyte och radering går det att sätta prioritet och deadline på projekt genom högerklick (se figur \ref{fig:sidebar_menu}) vilket var något Pelagia vill ha i sitt system.
+Utöver namnbyte och radering går det att sätta prioritet och deadline på projekt genom högerklick (se figur \ref{fig:sidebar_menu}) vilket var något Pelagia vill ha i sitt system. 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{images/sidebar_menu.png}
@@ -117,11 +117,20 @@ Flaggorna är något som Pelagia använder för att kategorisera vilket stadie e
 \subsubsection{Statistiksida}
 Denna del är mest en bonus för att visa hur det går att spara och visa statistik angående avklarade projekt.
 I nuläget är majoriteten av datan hårdkodad för att ha något att visa, men tanken är att detta ska uppdateras automatiskt när projekt
-markeras som avklarade och tillåta Pelagia att gå tillbaka genom tiden och se hur de ligger till.
+markeras som avklarade och tillåta Pelagia att gå tillbaka genom tiden och se hur de ligger till. Denna funktion var även ett önskemål från den administrativa sidan av Pelagia som upptäcktes genom testning.  
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{images/statistik.png}
     \caption{Statistiksidan där det syns antalet avklarade projekt veckovis.}
 \end{figure}
-\subsection{Resultat av testning}
+\subsection{Systemets helhet}
+Projekt Streamline har resulterat i en webbappliation som kan ersätta Pelagias tidigare system i Excel med ett modernare gränssnitt
+som fokuserar på struktur, översikt och användarvänlighet. Genom att kombinera bekanta element med nya funktioner som filtrering, sökning och projekthantering,
+får användarna ett verktyg som effektiviserar arbetet och både för nya och gamla användare.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/helhet.png}
+    \caption{Helhetsvy där alla komponenterna syns tillsammans.}
+\end{figure}
