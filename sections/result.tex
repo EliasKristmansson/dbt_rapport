@@ -1,8 +1,4 @@
 \section{Resultat och analys}
-Beskriv och förklara slutresultatet. bre Det är viktigt att det visuellt visas upp på bästa sätt i rapporten,
-men också att resultaten beskrivs så att läsaren kan förstå hur ni har tänkt och vilka effekter som olika val som ni har gjort har haft på ert slutresultat.
-Resultat och förändringar av ert projekt i samband med testning ska också vara med.
-\\\\
 Resultatet av Projekt Streamline är en användarvänlig och strukturerad webbapplikation byggd i React, vars syfte är att ersätta det tidigare dokumentationssystemet Pelagia har i Excel.
 Genom en iterativ process med kontinuerliga tester och dialoger med användarna på Pelagia har applikationen byggts för att bättre möta deras behov. Det levererade systemet blev
 ett mer överskådligt, lättanvänt och robust system som förhoppningsvis kan byggas vidare på och effektivisera Pelagias process.
@@ -93,7 +89,31 @@ Utöver namnbyte och radering går det att sätta prioritet och deadline på pro
 
 \noindent Slutligen för sidebar, genom att dubbelklicka på ett projekt öppnas motsvarande tabell i workspace och visas i Topbar som en tabb.
 Målet med denna struktur har varit att ersätta de stora, ostrukturerade kalkylarken i Excel med ett mer överskådligt och användarvänligt system.
+
 \subsubsection{Workspace}
+
+Workspace är själva arbetsytan i applikationen alltså platsen där Pelagias anställda kan se, lägga till och ändra information om prover inom ett specifikt projekt.
+När ett projekt öppnas från sidebar visas det i workspace i form av en tabell (se figur \ref{fig:workspace}), där varje rad representerar ett prov och varje kolumn visar fält som ska fyllas i kopplat till provet.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/workspace.PNG}
+    \caption{Workspace där användaren kan redigera och hantera prover inom ett öppet projekt.}
+    \label{fig:workspace}
+\end{figure}
+\noindent För att underlätta inlärningen för användare som är vana vid det tidigare Excelsystemet har tabellen i Workspace utformats med en liknande struktur, men med förbättringar i användarupplevelse, tydlighet och översikt genom att introducera utrymme mellan fält, färgskillnader, linjer och liknande. 
+Användaren kan enkelt lägga till, redigera eller ta bort rader med hjälp av tydliga knappar. I Workspace är det också svårare att av misstag ändra i fel projekt, eftersom varje projekt öppnas i sin egen tabb och redigeras isolerat från andra.
+\\\\
+Workspace tillåter även filtrering i tabellen genom knapparna uppe till vänster, något som saknades helt i det tidigare systemet. Det går att filtrera efter ej plockade- (ej klara), flaggade- och kommenterade prover.
+Flaggorna är något som Pelagia använder för att kategorisera vilket stadie ett prov är i (se figur \ref{fig:workspace_flag})., detta för att veta när nästa person ska ta över provet och utföra nästa steg i analysen. Filtreringen gör att en person som ska plocka prover endast behöver se ''Ej plockade'' och en person som arbetar med artning behöver bara se ''Plockade'' och så vidare.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.2\linewidth]{images/workspace_flaggning.png}
+    \caption{De olika flaggorna Pelagia använder.}
+    \label{fig:workspace_flag}
+\end{figure}
+\noindent Markeras ett prov med grön eller blå flagga så visas även det som ett klart prov i topbar enligt figur \ref{fig:topbar_info}.
+
 \subsubsection{Statistiksida}
 
 \subsection{}
